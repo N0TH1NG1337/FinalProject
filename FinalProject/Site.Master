@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FinalProject.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> Digital Dreams</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <!--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+    <link href="Nightmare.ico" rel="shortcut icon" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body class="NewBody">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Navigation bar -->
+        
+        <div class="NewNavigateBar">
+            
+            <a class="NewHeader" runat="server" href="/"><strong>Digital Dreams</strong></a>
+
+            <!-- The Bar Links -->
+                <ul style="list-style-type:none; overflow: hidden; margin: 0px">
+                    <li class="Pages"><a runat="server" href="/">Home</a></li>
+                    <% 
+                        if (IsLoggedIn)
+                        {
+                            Response.Write("<li class=\"Pages\"><a runat=\"server\" href=\"/Pages/Products\">Products</a></li>");
+
+                            Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">logout</i><a runat=\"server\" href=\"/Pages/LogOut\">Log Out</a></li>");
+                            if (IsAdmin)
+                                Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">shield</i><a runat=\"server\" href=\"/Pages/AdminPanel\">Admin Panel</a></li>");
+                            Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">person</i><a runat=\"server\" href=\"/Pages/UserPanel\">User</a></li>");
+                        }
+                        else
+                        {
+                            Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">login</i><a runat=\"server\" href=\"/Pages/LogIn\">Log In</a></li>");
+                            Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">exit_to_app</i><a runat=\"server\" href=\"/Pages/Register\">Sign Up</a></li>");
+                        }
+                       %>
+
+                    <li class="Pages"><a runat="server" href="/Pages/QandA">Q&A</a></li>
+                </ul>
+            
+        </div>
+
+        <div class="BodyContainer">
+            
+            <div class="PageLoad">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            
+            <!-- The devide like  -->
+            <hr style="border: 1px solid rgba(202, 202, 255, 0.3)"/>
+
+            <!-- The Down Text -->
+            <footer>
+                <p style="color: rgba(202, 202, 255, 0.4)">&copy; <%: DateTime.Now.Year %> - Michael Sokolov </p>
+            </footer>
+
+
+        </div>
+
+    </form>
+</body>
+</html>
