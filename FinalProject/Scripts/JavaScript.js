@@ -37,13 +37,13 @@ function Validate() {
     var ValidUserName = CheckUserName(UserName);
     if (ValidUserName !== null) {
         ErrorElement.innerHTML = ValidUserName;
-        return;
+        return false;
     }
      
     var ValidPassword = CheckPassword(Password);
     if (ValidPassword !== null) {
         ErrorElement.innerHTML = ValidPassword;
-        return;
+        return false;
     }
 
     return true;

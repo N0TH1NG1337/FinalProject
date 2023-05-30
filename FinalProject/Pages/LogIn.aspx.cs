@@ -35,7 +35,8 @@ namespace FinalProject.Pages
                     Session["userId"] = Row.userId;
                     Session["userName"] = Row.userName;
                     Session["firstName"] = Row.firstName;
-                    Session["birthday"] = (Row.birthday).ToString(); // we save as string to use later
+                    //Session["lastName"] = Row.lastName;
+                    Session["birthday"] = Row.birthday.ToString(); // we save as string to use later
                     Session["Admin"] = Row.Admin;
                     Response.Redirect("/Pages/Products");
 

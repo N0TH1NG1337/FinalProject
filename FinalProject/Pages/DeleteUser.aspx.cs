@@ -29,7 +29,7 @@ namespace FinalProject.Pages
                         Response.Redirect("/Pages/AdminPanel");
 
                     UserId = int.Parse(Request.QueryString["id"]);
-                    User UserObj = Helper.GetUserData(UserId);
+                    User UserObj = Helper.GetUserData(UserId, true);
 
                     // Save data to show before delete
                     Username = UserObj.userName;

@@ -27,6 +27,6 @@
     </div>
 
     <input type="submit" value="Update" class="Submit"/>
-
+    <p id="Error" class="ErrorOnLogIn"></p>
 
 </asp:Content>

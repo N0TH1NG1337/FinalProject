@@ -172,17 +172,20 @@ public static class Helper
         adapter.Update(ds, tblName);
     }
 
-    public static User GetUserData(int id)
-    // The Method check if there is a user with userName and Password. 
+    public static User GetUserData(int id, bool GetPassword)
+    // The Method check if there is a user with UserId. 
     // If true the Method return a user with the first Name and Admin property.
     // If not the Method return a user wuth first name "Visitor" and Admin = false
-
     {
         // התחברות למסד הנתונים
         SqlConnection con = new SqlConnection(conString);
 
+        // If the GetPassword is true, we will get the password, otherwise no.
+        string PatchPassword = (GetPassword ? ", [password]" : "");
+        int PatchIndex = (GetPassword ? 0 : -1);
+
         // בניית פקודת SQL
-        string SQL = $"SELECT userId, userName, [password], firstName, lastName, birthday, city, [admin] FROM " + tblName +
+        string SQL = $"SELECT userId, userName{PatchPassword}, firstName, lastName, birthday, city, [admin] FROM " + tblName +
                 $" WHERE userid='{id}'";
         SqlCommand cmd = new SqlCommand(SQL, con);
 
@@ -197,16 +200,20 @@ public static class Helper
             reader.Read();
             user.userId = reader.GetInt32(0);
             user.userName = reader.GetString(1);
-            user.password = reader.GetString(2);
-            if (reader.GetValue(3).GetType() != typeof(DBNull) && reader.GetValue(3).GetType() != null)
-                user.firstName = reader.GetString(3);
-            if (reader.GetValue(4).GetType() != typeof(DBNull) && reader.GetValue(4).GetType() != null)
-                user.lastName = reader.GetString(4);
-            if (reader.GetValue(5).GetType() != typeof(DBNull) && reader.GetValue(5).GetType() != null)
-                user.birthday = reader.GetDateTime(5);
-            if (reader.GetValue(6).GetType() != typeof(DBNull) && reader.GetValue(6).GetType() != null)
-                user.city = reader.GetString(6);
-            user.Admin = reader.GetBoolean(7);
+
+            // Need to preform this check
+            if (GetPassword)
+                user.password = reader.GetString(2);
+
+            if (reader.GetValue(3 + PatchIndex).GetType() != typeof(DBNull) && reader.GetValue(3 + PatchIndex).GetType() != null)
+                user.firstName = reader.GetString(3 + PatchIndex);
+            if (reader.GetValue(4 + PatchIndex).GetType() != typeof(DBNull) && reader.GetValue(4 + PatchIndex).GetType() != null)
+                user.lastName = reader.GetString(4 + PatchIndex);
+            if (reader.GetValue(5 + PatchIndex).GetType() != typeof(DBNull) && reader.GetValue(5 + PatchIndex).GetType() != null)
+                user.birthday = reader.GetDateTime(5 + PatchIndex);
+            if (reader.GetValue(6 + PatchIndex).GetType() != typeof(DBNull) && reader.GetValue(6 + PatchIndex).GetType() != null)
+                user.city = reader.GetString(6 + PatchIndex);
+            user.Admin = reader.GetBoolean(7 + PatchIndex);
         }
         else
         {
@@ -216,6 +223,9 @@ public static class Helper
         con.Close();
         return user;
     }
+    
+
+    
     public static User GetRow(string userName, string password)
     // The Method check if there is a user with userName and Password. 
     // If true the Method return a user with the first Name and Admin property.

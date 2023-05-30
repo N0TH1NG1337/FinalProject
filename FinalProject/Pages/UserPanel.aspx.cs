@@ -18,14 +18,24 @@ namespace FinalProject.Pages
                 // session is invalid
                 Response.Redirect("/Pages/Login");
 
+            // Redirect the user to local is the id is incorrect
+            if (Request.QueryString["id"] == "" || Request.QueryString["id"] == null)
+                Response.Redirect($"/Pages/UserPanel?id={Session["userId"]}");
+
+            int UserId = int.Parse(Request.QueryString["id"]);
+            User UserObj = Helper.GetUserData(UserId, false);
+
+            // Send us back to the Local User if the user doesnt exist
+            // Temp solution, until I will do error page
+            if (UserObj.userId == -1)
+                Response.Redirect($"/Pages/UserPanel?id={Session["userId"]}");
+
             // due to some issues, need to preform a cast to string
-            DateTime Birthday = DateTime.Parse((string)Session["birthday"]); // we
-            string UserName = (string)Session["userName"];
-            string FirstName = (string)Session["firstName"];
+            //DateTime Birthday = DateTime.Parse((string)Session["birthday"]);
+            //string UserName = (string)Session["userName"];
+            //string FirstName = (string)Session["firstName"];
 
-
-
-            BuildText[0] = String.Format("<h3> {0} </h3>  <p> First Name : {1} </p> <p> Birthday : {2} </p> <p> Role: User </p>", UserName, FirstName, Birthday.ToShortDateString().ToString());
+            BuildText[0] = String.Format("<h3> {0} </h3>  <p> {1} </p> <p> Birthday : {2} </p> <p> Role: User </p>", UserObj.firstName, UserObj.lastName, UserObj.birthday.ToShortDateString().ToString());
 
 
         }

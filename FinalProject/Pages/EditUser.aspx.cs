@@ -35,7 +35,7 @@ namespace FinalProject.Pages
                         Response.Redirect("/Pages/AdminPanel");
 
                     UserId = int.Parse(Request.QueryString["id"]);
-                    User UserObj = Helper.GetUserData(UserId);
+                    User UserObj = Helper.GetUserData(UserId, true);
 
                     // Saving information to use later
                     UserName = Helper.CleanString(UserObj.userName);
