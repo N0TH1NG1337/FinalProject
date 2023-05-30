@@ -339,11 +339,11 @@ public static class Helper
 
     public static string CreateEditLink(string id)
     {
-        return $"<a href='/Pages/Edit?id={id}' class='ButtonGet' style='marging: 10px' runat='server' >edit</a>";
+        return $"<a href='/Pages/EditUser?id={id}' class='ButtonGet' style='marging: 10px' runat='server' >edit</a>";
     }
     public static string CreateDeleteLink(string id)
     {
-        return $"<a href='/Pages/Delete?id={id}' class='ButtonGet' style='marging: 10px' runat='server' >delete</a>";
+        return $"<a href='/Pages/DeleteUser?id={id}' class='ButtonGet' style='marging: 10px' runat='server' >delete</a>";
     }
     public static string Createchkbox(bool isadmin)
     {
@@ -351,6 +351,25 @@ public static class Helper
             return $"<input type='checkbox' disabled checked/>";
         else
             return $"<input type='checkbox' disabled />";
+    }
+
+    // Function to clean SQL string return value.
+    public static string CleanString(string StringToUse)
+    {
+        // Detect space char from the end until the first char
+        string TempUse = StringToUse;
+
+        for (int Index = StringToUse.Length - 1; Index >= 0; Index--)
+        {
+            char Cur = StringToUse[Index];
+
+            if (Cur == ' ')
+                TempUse = TempUse.Remove(Index);
+            else
+                Index = -1; // stop the loop and dont use break
+        }
+
+        return TempUse; //StringToUse.Replace(" ", String.Empty); // Some users could use space in password or username and etc
     }
 
     public static DataTable SortTable(DataTable dt, string column, string dir)

@@ -3,10 +3,6 @@
 
     <h2 class="PageTitle">Log In</h2> <br />
 
-    <div class="ErrorOnLogIn" runat="server">
-       <%Response.Write(LogInMessege()); %>
-    </div>
-
     <div class="InputLoad">
         <label for="userName"> Username : </label> <br />
         <input type="text" id="userName" name="userName" class="InputBox"/> <br />
@@ -16,6 +12,10 @@
 
     </div>
     <br />
+
+    <div class="ErrorOnLogIn" runat="server">
+       <%Response.Write(LogInMessege()); %>
+    </div>
 
     <input type="submit" value="log in" class="Submit"/>
 

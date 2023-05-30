@@ -15,12 +15,12 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <!--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
     <link href="Nightmare.ico" rel="shortcut icon" type="image/x-icon" />
-    
+    <script src="/Scripts/JavaScript.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
-<body class="NewBody">
-    <form runat="server">
+<body>
+    <form runat="server" onsubmit="return Validate()">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -48,22 +48,22 @@
             <a class="NewHeader" runat="server" href="/"><strong>Digital Dreams</strong></a>
 
             <!-- The Bar Links -->
-                <ul style="list-style-type:none; overflow: hidden; margin: 0px">
+                <ul>
                     <li class="Pages"><a runat="server" href="/">Home</a></li>
                     <% 
                         if (IsLoggedIn)
                         {
                             Response.Write("<li class=\"Pages\"><a runat=\"server\" href=\"/Pages/Products\">Products</a></li>");
 
-                            Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">logout</i><a runat=\"server\" href=\"/Pages/LogOut\">Log Out</a></li>");
+                            Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/LogOut\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">logout</i>Log Out</a></li>");
                             if (IsAdmin)
-                                Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">shield</i><a runat=\"server\" href=\"/Pages/AdminPanel\">Admin Panel</a></li>");
-                            Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">person</i><a runat=\"server\" href=\"/Pages/UserPanel\">User</a></li>");
+                                Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/AdminPanel\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">shield</i>Admin Panel</a></li>");
+                            Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/UserPanel\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">person</i>User</a></li>");
                         }
                         else
                         {
-                            Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">login</i><a runat=\"server\" href=\"/Pages/LogIn\">Log In</a></li>");
-                            Response.Write("<li class=\"Pages LoginAndSignUp\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">exit_to_app</i><a runat=\"server\" href=\"/Pages/Register\">Sign Up</a></li>");
+                            Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/LogIn\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">login</i>Log In</a></li>");
+                            Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/Register\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">exit_to_app</i>Sign Up</a></li>");
                         }
                        %>
 
@@ -79,12 +79,10 @@
                 </asp:ContentPlaceHolder>
             </div>
             
-            <!-- The devide like  -->
             <hr style="border: 1px solid rgba(202, 202, 255, 0.3)"/>
 
-            <!-- The Down Text -->
             <footer>
-                <p style="color: rgba(202, 202, 255, 0.4)">&copy; <%: DateTime.Now.Year %> - Michael Sokolov </p>
+                <p style="color: rgba(202, 202, 255, 0.4)"> Michael Sokolov - Digital Dreams </p>
             </footer>
 
 

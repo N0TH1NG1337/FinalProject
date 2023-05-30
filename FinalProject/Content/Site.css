@@ -1,9 +1,15 @@
-﻿/* REGION : Defualt values */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
     padding-top: 10px;
     padding-bottom: 10px;
+    background-image: linear-gradient(to bottom right, #242226, #010100, #010100, #242226);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    min-height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Segoe UI;
 }
 
 /* fix the issue with the body background . Credit : BING AI */
@@ -23,48 +29,6 @@ textarea {
 }
 
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .jumbotron {
-        margin-top: 20px;
-    }
-
-    .body-content {
-        padding: 0;
-    }
-}
-
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-    background-color: #777;
-    border-color: #fff
-}
-
-/* END-REGION : Defualt values */
-
-/* REGION : KEY FRAMES */
-@keyframes Fade {
-    0% {
-        color: #a0a0ff;
-    }
-
-    25% {
-        color: #010100;
-    }
-
-    50% {
-        color: #8485fd;
-    }
-
-    75% {
-        color: #010100;
-    }
-
-    100% {
-        color: #a0a0ff;
-    }
-}
-
 @keyframes OpenFadeError {
     from {color: rgba(202, 202, 220, 0);}
 
@@ -76,25 +40,16 @@ textarea {
 
     to {color: rgba(202, 202, 220, 1);}
 }
-/* END-REGION : KEY FRAMES */
 
-
-/* REGION : New Values */
-
-.NewBody {
-    background-image: linear-gradient(to bottom right, #242226, #010100, #010100, #242226);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-    min-height: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-family: Segoe UI;
+@keyframes EnchantingEffect {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .Pages {
     display: block;
-    padding: 20px;
+    padding: 15px;
     color: #a0a0ff;
     text-shadow: 2px 2px 5px rgba(202, 202, 255, 0.4);
     background: -webkit-linear-gradient(#c5c5c5, #5d5d5d); /*#121111*/
@@ -103,6 +58,7 @@ textarea {
     font-size: 20px;
     float: left;
     opacity: 1;
+    margin-top: 5px;
     transition: opacity 0.3s;
 }
 
@@ -132,17 +88,15 @@ textarea {
 
 .NewNavigateBar {
     background-color: rgba(27, 23, 24, 1);
-    /*border-radius: 8px;
-    outline: solid rgb(67, 63, 64);
-        */
     border-radius: 8px;
-    border-bottom: solid rgba(202, 202, 255, 0.3); /* solid rgb(67, 63, 64) rgba(202, 202, 255, 0.3)*/
+    border-bottom: solid rgba(202, 202, 255, 0.3);
     margin: 10px;
     margin-bottom: 5px;
     /*position: fixed; */
     top: 0;
     left: 0;
     right: 0;
+    overflow: hidden;
 }
 
 .ProductBox {
@@ -164,20 +118,28 @@ textarea {
 
 .NewHeader {
     color: #a0a0ff;
-    text-shadow: 2px 2px 5px rgba(202, 202, 255, 0.4);
-    background: -webkit-linear-gradient(#adb0ff, #d1d3ff);
+    text-shadow: 0px 0px 10px rgba(202, 202, 255, 0.4);
+    /*background: -webkit-linear-gradient(#adb0ff, #d1d3ff);*/
+
+    background: linear-gradient(to right, #363636 20%, #adb0ff 40%, #adb0ff 60%, #363636 80%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: EnchantingEffect 1s linear infinite;
     font-size: 25px;
     padding: 15px;
     float: left;
     opacity: 1;
-    transition: opacity 0.3s, text-shadow 0.2s;
+    transition: opacity 0.3s, text-shadow 0.2s, animation 0.1s;
 }
 
 .NewHeader:hover {
     opacity: 0.5;
     text-shadow: none;
+    animation: none;
+    background:-webkit-linear-gradient(#adb0ff, #363636);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .BodyContainer {
@@ -206,6 +168,11 @@ textarea {
     background-color: rgba(37, 33, 34, 0.5);
     border-radius: 6px;
     border: 1px solid rgb(67, 63, 64);
+    transition: background-color 0.2s;
+}
+
+.InputBox:hover {
+    background-color: rgba(10, 10, 10, 0.5); 
 }
 
 .Submit {
@@ -216,7 +183,12 @@ textarea {
     background-color: rgba(37, 33, 34, 0.5);
     border-radius: 8px;
     border: 1px solid rgb(67, 63, 64);
-    font-size: 18px
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.Submit:hover {
+    background-color: rgba(10, 10, 10, 0.5); 
 }
 
 .ErrorOnLogIn {
@@ -252,10 +224,12 @@ textarea {
     background-color: rgba(37, 33, 34, 0.5);
     border-radius: 6px;
     border: 1px solid rgb(67, 63, 64);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .ButtonGet:hover {
-    color: white;
+    background-color: rgba(10, 10, 10, 0.5); 
+    color: rgb(150, 150, 150);
     text-decoration: none;
 }
 
@@ -271,4 +245,31 @@ textarea {
 .ImageOnHome:hover {
   transform: scale(1.1);
 }
-/* END-REGION : New Values */
+
+.BoxOutLineCreate {
+    background-color: rgba(37, 33, 34, 0.3);
+    border-radius: 10px;
+    outline: 1.5px solid rgb(67, 63, 64);
+    padding: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .Pages {
+        opacity: 0;
+        /*display: none;*/
+    }
+}
+
+/* need to use this to still have animations :D */
+@media screen and (max-width: 1050px) {
+    .Pages { 
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1129px) {
+    .ProductBox {
+        width: auto;
+        float: none;
+    }
+}

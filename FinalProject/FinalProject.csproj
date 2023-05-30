@@ -135,6 +135,8 @@
     <Content Include="Images\MenuVisuals.png" />
     <Content Include="Nightmare.ico" />
     <Content Include="Pages\AdminPanel.aspx" />
+    <Content Include="Pages\DeleteUser.aspx" />
+    <Content Include="Pages\EditUser.aspx" />
     <Content Include="Pages\QandA.aspx" />
     <Content Include="Pages\LogIn.aspx" />
     <Content Include="Pages\LogOut.aspx" />
@@ -144,6 +146,7 @@
     <Content Include="Pages\UserPanel.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\JavaScript.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -197,6 +200,20 @@
     </Compile>
     <Compile Include="Pages\AdminPanel.aspx.designer.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\QandA.aspx.cs">
       <DependentUpon>QandA.aspx</DependentUpon>

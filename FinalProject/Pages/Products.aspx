@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="FinalProject.Pages.Products" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1> Digital Dreams Luas </h1>
+    <h1 class="PageTitle"> Digital Dreams Luas </h1>
 
-    <p>Are you looking for a lua script that can give you an edge in your matches? Do you want a script that is user-friendly, customizable and reliable? If so, you might be interested in our lua script that offers:</p>
+    <p>Are you looking for a lua script that can give you an edge in your matches? Do you want a script that is user-friendly, customizable and reliable? If so, you might be interested in one of our products that offers:</p>
 
     <!-- Lua for neverlose -->
-    <div class="FixOverlap">
+    <div style="overflow: hidden">
 
         <div class="ProductBox">
             <h2 style="text-align: center"> Neverlose Lua </h2>

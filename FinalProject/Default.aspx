@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh;">
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh;">
         <h1 class="CenterText"> Digital Dreams </h1>
         <p class="CenterText"> Better than Luck, Worse than Nightmare</p>
     </div>
