@@ -146,6 +146,8 @@
     <Content Include="Pages\Products.aspx" />
     <Content Include="Pages\Public.aspx" />
     <Content Include="Pages\Register.aspx" />
+    <Content Include="Pages\TESTFalse.aspx" />
+    <Content Include="Pages\UpdateLog.aspx" />
     <Content Include="Pages\UserPanel.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -259,6 +261,20 @@
     </Compile>
     <Compile Include="Pages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TESTFalse.aspx.cs">
+      <DependentUpon>TESTFalse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TESTFalse.aspx.designer.cs">
+      <DependentUpon>TESTFalse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdateLog.aspx.cs">
+      <DependentUpon>UpdateLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateLog.aspx.designer.cs">
+      <DependentUpon>UpdateLog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\UserPanel.aspx.cs">
       <DependentUpon>UserPanel.aspx</DependentUpon>

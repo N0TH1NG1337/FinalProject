@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace FinalProject.Pages
 {
-    public partial class LogOut : System.Web.UI.Page
+    public partial class UpdateLog : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Abandon();
-            Response.Redirect("/Pages/LogIn");
+            if (Session["userId"] == null)
+                // session is invalid
+                Response.Redirect("/Pages/Login");
         }
     }
 }

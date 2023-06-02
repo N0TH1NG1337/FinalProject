@@ -121,11 +121,11 @@ textarea {
     text-shadow: 0px 0px 10px rgba(202, 202, 255, 0.4);
     /*background: -webkit-linear-gradient(#adb0ff, #d1d3ff);*/
 
-    background: linear-gradient(to right, #363636 20%, #adb0ff 40%, #adb0ff 60%, #363636 80%);
+    background: linear-gradient(to right, rgba(54, 54, 54, 0.1) 20%, #adb0ff 40%, #adb0ff 60%, rgba(54, 54, 54, 0.1) 80%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: EnchantingEffect 1s linear infinite;
+    animation: EnchantingEffect 2s linear infinite;
     font-size: 25px;
     padding: 15px;
     float: left;

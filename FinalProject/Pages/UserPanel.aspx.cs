@@ -17,27 +17,23 @@ namespace FinalProject.Pages
             if (Session["userId"] == null)
                 // session is invalid
                 Response.Redirect("/Pages/Login");
+            else
+            {
+                // Redirect the user to local is the id is incorrect
+                if (Request.QueryString["id"] == "" || Request.QueryString["id"] == null)
+                    Response.Redirect($"/Pages/UserPanel?id={Session["userId"]}");
 
-            // Redirect the user to local is the id is incorrect
-            if (Request.QueryString["id"] == "" || Request.QueryString["id"] == null)
-                Response.Redirect($"/Pages/UserPanel?id={Session["userId"]}");
+                int UserId = int.Parse(Request.QueryString["id"]);
+                User UserObj = Helper.GetUserData(UserId, false);
 
-            int UserId = int.Parse(Request.QueryString["id"]);
-            User UserObj = Helper.GetUserData(UserId, false);
+                // Send us back to the Local User if the user doesnt exist
+                // Temp solution, until I will do error page
+                if (UserObj.userId == -1)
+                    Response.Redirect($"/Pages/UserPanel?id={Session["userId"]}");
 
-            // Send us back to the Local User if the user doesnt exist
-            // Temp solution, until I will do error page
-            if (UserObj.userId == -1)
-                Response.Redirect($"/Pages/UserPanel?id={Session["userId"]}");
+                BuildText[0] = String.Format("<h3> {0} </h3>  <p> {1} </p> <p> Birthday : {2} </p> <p> Role: User </p>", UserObj.firstName, UserObj.lastName, UserObj.birthday.ToShortDateString().ToString());
 
-            // due to some issues, need to preform a cast to string
-            //DateTime Birthday = DateTime.Parse((string)Session["birthday"]);
-            //string UserName = (string)Session["userName"];
-            //string FirstName = (string)Session["firstName"];
-
-            BuildText[0] = String.Format("<h3> {0} </h3>  <p> {1} </p> <p> Birthday : {2} </p> <p> Role: User </p>", UserObj.firstName, UserObj.lastName, UserObj.birthday.ToShortDateString().ToString());
-
-
+            }
         }
     }
 }

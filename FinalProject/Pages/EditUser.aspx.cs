@@ -16,7 +16,7 @@ namespace FinalProject.Pages
         protected string Password;
         protected string FirstName;
         protected string LastName;
-        protected DateTime BirthDay;
+        protected string BirthDay;
         protected string City;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace FinalProject.Pages
                     Password = Helper.CleanString(UserObj.password);
                     FirstName = Helper.CleanString(UserObj.firstName);
                     LastName = Helper.CleanString(UserObj.lastName);
-                    BirthDay = UserObj.birthday;
+                    BirthDay = UserObj.birthday.ToString();
                     City = Helper.CleanString(UserObj.city);
 
                     if (IsPostBack)
