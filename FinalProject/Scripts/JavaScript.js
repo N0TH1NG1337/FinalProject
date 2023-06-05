@@ -1,6 +1,6 @@
 ﻿
 //Minimum eight characters, at least one uppercase letter, one lowercase letter and one number
-var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{5,}$/;
+var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 
 // username is 8-20 characters long, no _ or . at the beginning and end, no __ or _. or ._ or .. inside
 var RegExUsername = /^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
@@ -10,7 +10,7 @@ function CheckUserName(username) {
         return "Username cant be empty";
 
     if (!RegExUsername.test(username))
-        return "Username must be 8-20 chars long, english only"
+        return "Username must be 8-20 chars long, english only";
 
     return null;
 }
@@ -20,7 +20,7 @@ function CheckPassword(password) {
         return "Password cant be empty";
 
     if (!RegExPassword.test(password))
-        return "Password must be minimum eight characters, at least one uppercase letter, one lowercase letter and one number"
+        return "Password must be minimum eight characters, at least one uppercase letter, one lowercase letter and one number";
 
     return null;
 }

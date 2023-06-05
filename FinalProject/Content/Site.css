@@ -89,7 +89,7 @@ textarea {
 .NewNavigateBar {
     background-color: rgba(27, 23, 24, 1);
     border-radius: 8px;
-    border-bottom: solid rgba(202, 202, 255, 0.3);
+    border-bottom: groove rgba(202, 202, 255, 0.3); /*rgba(202, 202, 255, 0.3)*/
     margin: 10px;
     margin-bottom: 5px;
     /*position: fixed; */
