@@ -15,8 +15,10 @@ namespace FinalProject.Pages
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["userId"] == null)
+            {
                 // session is invalid
                 Response.Redirect("/Pages/Login");
+            }
             else
             {
                 // Redirect the user to local is the id is incorrect
@@ -31,8 +33,19 @@ namespace FinalProject.Pages
                 if (UserObj.userId == -1)
                     Response.Redirect($"/Pages/UserPanel?id={Session["userId"]}");
 
-                BuildText[0] = String.Format("<h3> {0} </h3>  <p> {1} </p> <p> Birthday : {2} </p> <p> Role: User </p>", UserObj.firstName, UserObj.lastName, UserObj.birthday.ToShortDateString().ToString());
+                BuildText[0] = String.Format("<h3> {0} </h3>  <p> {1} </p> <p> Birthday : {2} </p> <p> {3} </p>", UserObj.firstName, UserObj.lastName, UserObj.birthday.ToShortDateString().ToString(), UserObj.Admin ? "Admin" : "User");
 
+
+                if (IsPostBack)
+                {
+                    string Input = Request.Form["userInput"];
+
+                    if (Input != null && Input != "")
+                    {
+                        int UID = Helper.GetUserIdByName(Input);
+                        Response.Redirect($"/Pages/UserPanel?id={UID.ToString()}");
+                    }
+                }
             }
         }
     }

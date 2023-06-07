@@ -54,7 +54,7 @@
                         if (IsLoggedIn)
                         {
                             Response.Write("<li class=\"Pages\"><a runat=\"server\" href=\"/Pages/Products\">Products</a></li>");
-                            Response.Write("<li class=\"Pages\"><a runat=\"server\" href=\"/Pages/UpdateLog\">Update Log</a></li>");
+                            Response.Write("<li class=\"Pages\"><a runat=\"server\" href=\"/Pages/Forum\">Forum</a></li>");
 
                             Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/LogOut\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">logout</i>Log Out</a></li>");
                             if (IsAdmin)
@@ -80,7 +80,7 @@
                 </asp:ContentPlaceHolder>
             </div>
             
-            <hr style="border: 1px solid rgba(202, 202, 255, 0.3)"/>
+            <hr/>
 
             <footer>
                 <p style="color: rgba(202, 202, 255, 0.4)"> Michael Sokolov - Digital Dreams </p>

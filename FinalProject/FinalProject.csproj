@@ -140,11 +140,11 @@
     <Content Include="Pages\AdminPanel.aspx" />
     <Content Include="Pages\DeleteUser.aspx" />
     <Content Include="Pages\EditUser.aspx" />
+    <Content Include="Pages\Forum.aspx" />
     <Content Include="Pages\QandA.aspx" />
     <Content Include="Pages\LogIn.aspx" />
     <Content Include="Pages\LogOut.aspx" />
     <Content Include="Pages\Products.aspx" />
-    <Content Include="Pages\Public.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="Pages\UpdateLog.aspx" />
     <Content Include="Pages\UserPanel.aspx" />
@@ -219,6 +219,13 @@
     <Compile Include="Pages\EditUser.aspx.designer.cs">
       <DependentUpon>EditUser.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Forum.aspx.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Forum.aspx.designer.cs">
+      <DependentUpon>Forum.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\QandA.aspx.cs">
       <DependentUpon>QandA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -246,13 +253,6 @@
     </Compile>
     <Compile Include="Pages\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Public.aspx.cs">
-      <DependentUpon>Public.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Public.aspx.designer.cs">
-      <DependentUpon>Public.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

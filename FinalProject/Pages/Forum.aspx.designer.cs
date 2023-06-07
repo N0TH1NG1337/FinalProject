@@ -11,7 +11,7 @@ namespace FinalProject.Pages
 {
 
 
-    public partial class Public
+    public partial class Forum
     {
     }
 }

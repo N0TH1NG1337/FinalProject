@@ -1,16 +1,19 @@
 ﻿
-//Minimum eight characters, at least one uppercase letter, one lowercase letter and one number
-var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+//Minimum 5 and maximum 30 characters, at least one uppercase letter, one lowercase letter, one number and one special character:
+var RegExPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,30}$/;
 
 // username is 8-20 characters long, no _ or . at the beginning and end, no __ or _. or ._ or .. inside
-var RegExUsername = /^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
+var RegExUsername = /^(?=.{5,30}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
 
 function CheckUserName(username) {
     if (username.length == 0)
         return "Username cant be empty";
 
+    if (username.length >= 30)
+        return "Username can be only up to 30 chars";
+
     if (!RegExUsername.test(username))
-        return "Username must be 8-20 chars long, english only";
+        return "Username must be minimum 5 chars long, english only";
 
     return null;
 }
@@ -19,8 +22,11 @@ function CheckPassword(password) {
     if (password.length == 0)
         return "Password cant be empty";
 
+    if (password.length >= 30)
+        return "Password can be only up to 30 chars";
+
     if (!RegExPassword.test(password))
-        return "Password must be minimum eight characters, at least one uppercase letter, one lowercase letter and one number";
+        return "Password must contain at least one uppercase letter, one lowercase letter, one number and one special character, and minimum 5 chars";
 
     return null;
 }
@@ -47,4 +53,26 @@ function Validate() {
     }
 
     return true;
+}
+
+
+/* On Click Events */
+function OnAnnounce() {
+    // Announce
+    var Div = document.getElementById("Announce");
+    Div.classList.toggle("show");
+        
+}
+
+function OnUpdate() {
+    //UpdateLog
+    var Div = document.getElementById("UpdateLog");
+    Div.classList.toggle("show");
+}
+
+function OnMedia() {
+    //Videos
+    var Div = document.getElementById("Videos");
+    Div.classList.toggle("show");
+
 }

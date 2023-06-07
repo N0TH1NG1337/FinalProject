@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="FinalProject.Pages.Products" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1 class="PageTitle"> Digital Dreams Luas </h1>
+    <h2 class="PageTitle"> Digital Dreams Luas </h2>
 
     <p>Are you looking for a lua script that can give you an edge in your matches? Do you want a script that is user-friendly, customizable and reliable? If so, you might be interested in one of our products that offers:</p>
 
@@ -8,7 +8,7 @@
     <div style="overflow: hidden">
 
         <div class="ProductBox">
-            <h2 style="text-align: center"> Neverlose Lua </h2>
+            <h2 class="CenterText"> Neverlose Lua </h2>
             
             <ul>
                 <li class="ListAnim"> A unique menu that lets you access and adjust all the features with ease</li>
@@ -18,14 +18,36 @@
                 <li class="ListAnim"> Useful misc features that add fun and functionality to your gameplay</li>
             </ul>
 
-            <div style="text-align: center;">
-                <a href="https://market.neverlose.cc/tVVVfD" target="_blank" class="ButtonGet">Buy now !</a>
+            <hr />
+
+            <h3 class="CenterText"> Regular version </h3>
+
+            <ul>
+                <li class="ListAnim"> Low Price </li>
+            </ul>
+
+            <div class="CenterText">
+                <a href="https://market.neverlose.cc/tVVVfD" target="_blank" class="ButtonGet">Buy</a>
+            </div>
+
+            <hr />
+
+            <h3 class="CenterText"> Nightmare version </h3>
+
+            <ul>
+                <li class="ListAnim"> Before everyone updates </li>
+                <li class="ListAnim"> Exclusive Features </li>
+                <li class="ListAnim"> Closer to the developer </li>
+            </ul>
+
+            <div class="CenterText">
+                <a href="https://market.neverlose.cc/PqSomv" target="_blank" class="ButtonGet">Buy</a>
             </div>
             
         </div>
 
         <div class="ProductBox">
-            <div style="text-align: center;">
+            <div class="CenterText">
                 <h2> GameSense Lua </h2>
                 <a class="ButtonGet">Unavailable</a>
             </div>

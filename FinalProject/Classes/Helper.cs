@@ -224,7 +224,32 @@ public static class Helper
         return user;
     }
     
+    public static int GetUserIdByName(string Name)
+    {
+        // התחברות למסד הנתונים
+        SqlConnection con = new SqlConnection(conString);
 
+        // בניית פקודת SQL
+        string SQL = $"SELECT userId FROM " + tblName +
+                $" WHERE firstName='{Name}' OR lastName='{Name}'";
+        SqlCommand cmd = new SqlCommand(SQL, con);
+
+        // ביצוע השאילתא
+        con.Open();
+        SqlDataReader reader = cmd.ExecuteReader();
+
+        // שימוש בנתונים שהתקבלו
+        int NewID = -1;
+        if (reader.HasRows)
+        {
+            reader.Read();
+            NewID = reader.GetInt32(0);
+
+        }
+        reader.Close();
+        con.Close();
+        return NewID;
+    }
     
     public static User GetRow(string userName, string password)
     // The Method check if there is a user with userName and Password. 
@@ -308,7 +333,7 @@ public static class Helper
         foreach (DataColumn column in dt.Columns)
         {
             int IndexOfName = Array.IndexOf(OldNames, column.ColumnName);
-            str += "<td style='padding: 10px'>" + NewNames[IndexOfName] + "</td>";
+            str += "<td class='GlowText'><strong>" + NewNames[IndexOfName] + "</strong></td>";
         }
         
 
