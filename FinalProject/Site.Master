@@ -41,20 +41,18 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <!-- Navigation bar -->
-        
+
         <div class="NewNavigateBar">
             
             <a class="NewHeader" runat="server" href="/"><strong>Digital Dreams</strong></a>
 
-            <!-- The Bar Links -->
                 <ul>
                     <li class="Pages"><a runat="server" href="/">Home</a></li>
                     <% 
                         if (IsLoggedIn)
                         {
-                            Response.Write("<li class=\"Pages\"><a runat=\"server\" href=\"/Pages/Products\">Products</a></li>");
                             Response.Write("<li class=\"Pages\"><a runat=\"server\" href=\"/Pages/Forum\">Forum</a></li>");
+                            Response.Write("<li class=\"Pages\"><a runat=\"server\" href=\"/Pages/Products\">Products</a></li>");
 
                             Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/LogOut\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">logout</i>Log Out</a></li>");
                             if (IsAdmin)

@@ -22,26 +22,26 @@
 
     <br /><br />
 
-    <div id="RageBot" class="BoxOverlay">
+    <div id="RageBot" class="BoxOverlay ShowBox">
         <h3> RageBot </h3>
 
-        <ul style="float: left;">
+        <ul>
             <li class="ListAnim"> Adaptive Hideshots: When you peek out from behind the object, the script will switch from exploit mode to favor fire rate, allowing you to shoot more bullets at the enemy.</li>
             <li class="ListAnim"> Jump Scout Assist: This feature helps you to land more accurate shots when you are jumping.</li>
             <li class="ListAnim"> Unsafe DoubleTap Charge: This feature allows you to charge your double-tap shot even if you are not in a safe position.</li>
             <li class="ListAnim"> DoubleTap Uncharge attack: This feature allows you to uncharge your double-tap shot when you land, teleporting you to the ground and damaging any enemies in your path. This can be helpful for taking down enemies who are close to you or who are not expecting it.</li>
             <li class="ListAnim"> Air and No Scope Hitchance: This feature increases your chance of hitting a shot while you are in the air or without using a scope.</li>
         </ul>
-        <img class="ImageOnHome" style="float: right;" src="Images/MenuRage.png" />
+        <img class="ImageOnHome" src="Images/MenuRage.png" />
 
     </div>
 
     <br /><br />
 
-    <div id="AntiAim" class="BoxOverlay">
-        <h3 style="margin-left: 50%"> Anti Aim </h3>
+    <div id="AntiAim" class="BoxOverlay ShowBoxInvert">
+        <h3> Anti Aim </h3>
 
-        <ul style="float: right;">
+        <ul>
             <li class="ListAnim"> Anti Aim types (Auto Presets, Digital and default Builder): Choose from different anti aim presets to confuse and evade your enemies.</li>
             <li class="ListAnim"> Pitch and Yaw control: Adjust the angle of your view to dodge bullets and surprise attacks.</li>
             <li class="ListAnim"> Manuals: Turn your head left, right or back with keybinds to control your anti aim direction.</li>
@@ -51,16 +51,16 @@
             <li class="ListAnim"> Static on Manuals, Warmup, Round-End: Keep your anti aim static in certain situations for stability and consistency.</li>
             <li class="ListAnim"> Break LC in air: Break lag compensation in mid-air.</li>
         </ul>
-        <img class="ImageOnHome" style="float: left;" src="Images/MenuAA.png" />
+        <img class="ImageOnHome" src="Images/MenuAA.png" />
 
     </div>
 
     <br /><br />
 
-    <div id="Visuals" class="BoxOverlay">
+    <div id="Visuals" class="BoxOverlay ShowBox">
         <h3> Visuals </h3>
 
-        <ul style="float: left;">
+        <ul>
             <li class="ListAnim"> Watermark and Keybinds: Display a custom watermark and keybinds on your screen for easy reference and style.</li>
             <li class="ListAnim"> HUD: Customize your heads-up display with various options and colors, with information about your health, ammo, weapon, and more.</li>
             <li class="ListAnim"> Side Panel: Show a side panel with indicators of some keybinds to help you keep track of your actions and settings.</li>
@@ -74,16 +74,16 @@
             <li class="ListAnim"> Local Animations (Static legs in Air, Move and etc): Customize the animations of your character for different actions and movements.</li>
             <li class="ListAnim"> Bloom: Add a bloom effect to your visuals for a more realistic and immersive look.</li>
         </ul>
-        <img class="ImageOnHome" style="float: right;" src="Images/MenuVisuals.png" />
+        <img class="ImageOnHome" src="Images/MenuVisuals.png" />
 
     </div>
 
     <br /><br />
 
-    <div id="Misc" class="BoxOverlay">
-        <h3 style="margin-left: 50%"> Misc </h3>
+    <div id="Misc" class="BoxOverlay ShowBoxInvert">
+        <h3> Misc </h3>
 
-        <ul style="float: right;">
+        <ul>
             <li class="ListAnim"> Clan Tag: Set a custom clan tag for yourself with different styles.</li>
             <li class="ListAnim"> Trash Talk: Automatically send messages to trash talk your enemies.</li>
             <li class="ListAnim"> Logs (Screen and Console): Log various events and actions on your screen and console for easy tracking.</li>
@@ -91,7 +91,7 @@
             <li class="ListAnim"> Remove options (Radar, Chat and Ragdoll Physics, etc): Remove unwanted elements from your screen for a cleaner and smoother gameplay.</li>
             <li class="ListAnim"> Old Weapon Sounds: Use the old weapon sounds from previous versions of the game for nostalgia or preference.</li>
         </ul>
-        <img class="ImageOnHome" style="float: left;" src="Images/MenuMisc.png" />
+        <img class="ImageOnHome" src="Images/MenuMisc.png" />
 
     </div>
 

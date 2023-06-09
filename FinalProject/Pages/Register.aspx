@@ -11,16 +11,16 @@
         <input type="password" id="password" name="password" class="InputBox" required/> <br />
 
         <label for="firstName"> Firstname : </label> <br />
-        <input type="text" id="firstName" name="firstName" class="InputBox"/> <br />
+        <input type="text" id="firstName" name="firstName" class="InputBox" required/> <br />
 
         <label for="lastName"> Lastname : </label> <br />
-        <input type="text" id="lastName" name="lastName" class="InputBox"/> <br />
+        <input type="text" id="lastName" name="lastName" class="InputBox" required/> <br />
 
         <label for="birthday"> Birthday : </label> <br />
         <input type="date" id="birthday" name="birthday" class="InputBox" required/> <br />
 
         <label for="city"> City : </label> <br />
-        <input list="Cities" id="city" name="city" class="InputBox"/> <br />
+        <input list="Cities" id="city" name="city" class="InputBox" required/> <br />
         <datalist id="Cities">
             <option value="Tel-Aviv"/>
             <option value="Jerusalem"/>

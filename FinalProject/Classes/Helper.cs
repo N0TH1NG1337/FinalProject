@@ -335,7 +335,8 @@ public static class Helper
             int IndexOfName = Array.IndexOf(OldNames, column.ColumnName);
             str += "<td class='GlowText'><strong>" + NewNames[IndexOfName] + "</strong></td>";
         }
-        
+        str += "</tr>";
+
 
         foreach (DataRow row in dt.Rows)
         {
@@ -391,20 +392,7 @@ public static class Helper
     // Function to clean SQL string return value.
     public static string CleanString(string StringToUse)
     {
-        // Detect space char from the end until the first char
-        string TempUse = StringToUse;
-
-        for (int Index = StringToUse.Length - 1; Index >= 0; Index--)
-        {
-            char Cur = StringToUse[Index];
-
-            if (Cur == ' ')
-                TempUse = TempUse.Remove(Index);
-            else
-                Index = -1; // stop the loop and dont use break
-        }
-
-        return TempUse; //StringToUse.Replace(" ", String.Empty); // Some users could use space in password or username and etc
+        return StringToUse.TrimEnd();
     }
 
     public static DataTable SortTable(DataTable dt, string column, string dir)

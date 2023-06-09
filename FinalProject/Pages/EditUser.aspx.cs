@@ -17,6 +17,7 @@ namespace FinalProject.Pages
         protected string FirstName;
         protected string LastName;
         protected string BirthDay;
+        protected string FixedB;
         protected string City;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace FinalProject.Pages
                     Password = Helper.CleanString(UserObj.password);
                     FirstName = Helper.CleanString(UserObj.firstName);
                     LastName = Helper.CleanString(UserObj.lastName);
-                    BirthDay = UserObj.birthday.ToString();
+                    BirthDay = UserObj.birthday.ToString("yyyy-MM-dd"); // To insert the value need to use yyyy-MM-dd format
                     City = Helper.CleanString(UserObj.city);
 
                     if (IsPostBack)
@@ -64,7 +65,7 @@ namespace FinalProject.Pages
             }
             else
             {
-                // if the session is invalid
+                // If the session is invalid
                 Response.Redirect("/Pages/Login");
             }
 

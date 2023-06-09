@@ -29,7 +29,7 @@ textarea {
 }
 
 hr {
-    border: 1px solid rgba(202, 202, 255, 0.3)
+    border: 1px solid rgba(67, 63, 64, 0.3);
 }
 
 
@@ -111,10 +111,6 @@ hr {
     width: 48%;
     padding: 10px;
     margin: 10px;
-}
-
-.ProductBox hr {
-    color: rgb(67, 63, 64);
 }
 
 .AdminTableBox {
@@ -267,11 +263,6 @@ hr {
     overflow: hidden
 }
 
-.UserCenterVertically {
-    display: flex;
-    align-items: center
-}
-
 .MainText {
     display: flex;
     flex-direction: column;
@@ -322,8 +313,48 @@ hr {
     margin: 10px;
 }
 
-.ForumBox hr {
-    border: 1px solid rgba(67, 63, 64, 0.3)
+.ForumBox h4 {
+    cursor: default;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.ForumBox h4:hover {
+    opacity: 0.4;
+}
+
+.ShowBox ul {
+    float: left;
+}
+
+.ShowBox img {
+    float: right;
+}
+
+.ShowBoxInvert ul {
+    float: right;
+}
+
+.ShowBoxInvert img {
+    float: left;
+}
+
+.ShowBoxInvert h3 {
+    margin-left: 50%;
+}
+
+#UserImage {
+    font-size: 120px;
+    padding: 10px;
+}
+
+#ProductsBody {
+    overflow: hidden
+}
+
+#UserBox {
+    display: flex;
+    align-items: center
 }
 
 #Announce {
@@ -368,6 +399,10 @@ hr {
     opacity: 1;
 }
 
+#VideosHandle {
+    display: flex; 
+    justify-content: center
+}
 
 @media screen and (max-width: 1100px) {
     .Pages {

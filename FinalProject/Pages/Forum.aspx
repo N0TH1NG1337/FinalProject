@@ -114,7 +114,7 @@
             <div id="Videos">
                 <br />
                 
-                <div style="display: flex; justify-content: center">
+                <div id="VideosHandle">
                     <iframe src="https://www.youtube.com/embed/CQFHxcXQeoE"></iframe>
                     <iframe src="https://www.youtube.com/embed/VuiGWD3Gcpc"></iframe>
                     <iframe src="https://www.youtube.com/embed/8JvtHJzdGqI"></iframe>

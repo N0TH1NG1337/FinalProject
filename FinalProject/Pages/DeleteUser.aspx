@@ -6,8 +6,10 @@
 
     <br />
     <h3> User Data </h3>
-    <% Response.Write(String.Format("<h4> First Name : {0} </h4>", Firstname));
-       Response.Write(String.Format("<h4> Last Name : {0} </h4>", Lastname));
+    <% 
+        Response.Write(String.Format("<h4> Username : {0} </h4>", Username));
+        Response.Write(String.Format("<h4> First Name : {0} </h4>", Firstname));
+        Response.Write(String.Format("<h4> Last Name : {0} </h4>", Lastname));
     %>
     <br />
 

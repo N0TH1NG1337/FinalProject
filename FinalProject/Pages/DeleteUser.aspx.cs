@@ -19,12 +19,12 @@ namespace FinalProject.Pages
         {
             if (Session["userId"] != null)
             {
-                // we check if we are not admin to return the user to other page
+                // We check if we are not admin to return the user to other page
                 if (!bool.Parse(Session["Admin"].ToString()))
                     Response.Redirect("~/");
                 else
                 {
-                    // do everything
+                    // Do everything
                     if (Request.QueryString["id"] == "" || Request.QueryString["id"] == null)
                         Response.Redirect("/Pages/AdminPanel");
 
@@ -46,7 +46,7 @@ namespace FinalProject.Pages
             }
             else
             {
-                // if the session is invalid
+                // If the session is invalid
                 Response.Redirect("/Pages/Login");
             }
         }

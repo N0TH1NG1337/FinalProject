@@ -5,7 +5,7 @@
     <p>Are you looking for a lua script that can give you an edge in your matches? Do you want a script that is user-friendly, customizable and reliable? If so, you might be interested in one of our products that offers:</p>
 
     <!-- Lua for neverlose -->
-    <div style="overflow: hidden">
+    <div id="ProductsBody">
 
         <div class="ProductBox">
             <h2 class="CenterText"> Neverlose Lua </h2>
