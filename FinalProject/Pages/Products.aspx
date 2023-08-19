@@ -4,11 +4,10 @@
 
     <p>Are you looking for a lua script that can give you an edge in your matches? Do you want a script that is user-friendly, customizable and reliable? If so, you might be interested in one of our products that offers:</p>
 
-    <!-- Lua for neverlose -->
     <div id="ProductsBody">
 
-        <div class="ProductBox">
-            <h2 class="CenterText"> Neverlose Lua </h2>
+        <div class="Box ProductBox">
+            <h2 class="CenterText GlowText"> Neverlose Lua </h2>
             
             <ul>
                 <li class="ListAnim"> A unique menu that lets you access and adjust all the features with ease</li>
@@ -46,9 +45,9 @@
             
         </div>
 
-        <div class="ProductBox">
+        <div class="Box ProductBox">
             <div class="CenterText">
-                <h2> GameSense Lua </h2>
+                <h2 class="GlowText"> GameSense Lua </h2>
                 <a class="ButtonGet">Unavailable</a>
             </div>
         </div>

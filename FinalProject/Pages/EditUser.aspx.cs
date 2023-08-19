@@ -39,12 +39,12 @@ namespace FinalProject.Pages
                     User UserObj = Helper.GetUserData(UserId, true);
 
                     // Saving information to use later
-                    UserName = Helper.CleanString(UserObj.userName);
-                    Password = Helper.CleanString(UserObj.password);
-                    FirstName = Helper.CleanString(UserObj.firstName);
-                    LastName = Helper.CleanString(UserObj.lastName);
+                    UserName = UserObj.userName.TrimEnd();
+                    Password = UserObj.password.TrimEnd();
+                    FirstName = UserObj.firstName.TrimEnd();
+                    LastName = UserObj.lastName.TrimEnd();
                     BirthDay = UserObj.birthday.ToString("yyyy-MM-dd"); // To insert the value need to use yyyy-MM-dd format
-                    City = Helper.CleanString(UserObj.city);
+                    City = UserObj.city.TrimEnd();
 
                     if (IsPostBack)
                     {

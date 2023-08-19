@@ -26,7 +26,8 @@
         <input type="text" id="city" name="city" value="<%=City %>" class="InputBox"/> <br />
     </div>
 
-    <input type="submit" value="Update" class="Submit"/>
     <p id="Error" class="ErrorOnLogIn"></p>
+    <input type="submit" value="Update" class="Submit"/>
+    
 
 </asp:Content>

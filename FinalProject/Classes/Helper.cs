@@ -231,7 +231,7 @@ public static class Helper
 
         // בניית פקודת SQL
         string SQL = $"SELECT userId FROM " + tblName +
-                $" WHERE firstName='{Name}' OR lastName='{Name}'";
+                $" WHERE firstName='{Name}' OR lastName='{Name}'"; // Note: maybe will be better to do 
         SqlCommand cmd = new SqlCommand(SQL, con);
 
         // ביצוע השאילתא
@@ -327,7 +327,7 @@ public static class Helper
     // the Method Build HTML user Table with checkBoxes using the users in the DataTable dt.
     {
 
-        string str = "<table class='usersTable AdminTableBox' align='center' style='padding: 20px'>";
+        string str = "<table class='usersTable Box AdminTableBox' align='center'>";
         str += "<tr>";
         // set everything left // str += "<td> </td>";
         foreach (DataColumn column in dt.Columns)
@@ -387,12 +387,6 @@ public static class Helper
             return $"<input type='checkbox' disabled checked/>";
         else
             return $"<input type='checkbox' disabled />";
-    }
-
-    // Function to clean SQL string return value.
-    public static string CleanString(string StringToUse)
-    {
-        return StringToUse.TrimEnd();
     }
 
     public static DataTable SortTable(DataTable dt, string column, string dir)

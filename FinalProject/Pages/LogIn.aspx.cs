@@ -24,7 +24,6 @@ namespace FinalProject.Pages
             {
                 string Username = Request.Form["userName"];
                 string Password = Request.Form["password"];
-                //User Row = new User();
 
                 User Row = Helper.GetRow(Username, Password);
 
@@ -35,7 +34,6 @@ namespace FinalProject.Pages
                     Session["userId"] = Row.userId;
                     Session["userName"] = Row.userName;
                     Session["firstName"] = Row.firstName;
-                    //Session["lastName"] = Row.lastName;
                     Session["birthday"] = Row.birthday.ToString(); // we save as string to use later
                     Session["Admin"] = Row.Admin;
                     Response.Redirect("/Pages/Products");

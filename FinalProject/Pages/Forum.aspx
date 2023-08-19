@@ -5,16 +5,21 @@
 
     <div class="ForumHandle">
 
-        <div class="ForumBox">
+        <div class="Box ForumBox">
             <h4 onclick="OnAnnounce()"> Announcement </h4>
 
             <div id="Announce">
                 <br />
 
                 <p> 
-                    A temporary fix pushed to fix some errors. Get item again from Market.
+                    Digital Dreams is looking for new nightmare users (aka beta testers) to join our Nightmare Team.<br />
                     <br />
-                    Soon will be bigger update with some new things
+                    <strong> How to apply? </strong><br />
+                    Open a ticket and write that you are interested in joining the Nightmare Team.<br />
+                    Write (in as much detail as possible) why you want to be a nightmare user and what skills or experience you have that make you a good candidate.<br />
+                    Wait for the staff to review your application and let you know if you are selected for the Nightmare Team.<br />
+                    <br />
+                    <strong>Note:</strong> Applicants who have the regular lua script will have a higher chance of being selected for the Nightmare Team.
                 </p>
 
                 <br />
@@ -24,7 +29,7 @@
         <br />
 
         <h3 class="GlowText"> Lua </h3>
-        <div class="ForumBox">
+        <div class="Box ForumBox">
 
             <h4 onclick="OnUpdate()"> Update Log </h4>
 
@@ -118,13 +123,14 @@
                     <iframe src="https://www.youtube.com/embed/CQFHxcXQeoE"></iframe>
                     <iframe src="https://www.youtube.com/embed/VuiGWD3Gcpc"></iframe>
                     <iframe src="https://www.youtube.com/embed/8JvtHJzdGqI"></iframe>
-                    <iframe src="https://www.youtube.com/embed/dgVmVfxu394"></iframe>
+                    <iframe src="https://www.youtube.com/embed/Gpi3NePpSDc"></iframe>
+                    <iframe src="https://www.youtube.com/embed/wWj3SEoxK2E"></iframe>
                 </div>
 
                 <br />
             </div>
 
-            <h6> Media by Users </h6>
+            <h6> Videos by Users </h6>
 
         </div>
 

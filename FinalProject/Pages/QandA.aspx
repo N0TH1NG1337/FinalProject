@@ -5,28 +5,33 @@
     
     <br />
 
-    <h3> What is Digital Dreams ? </h3>
-    <p>Digital Dreams is a project created in 2021 by N0TH1NG. </p>
-    <br />
+    <div class="PageDistance">
+        <h3> What is Digital Dreams? </h3>
+        <p>Digital Dreams is a project founded in 2021 by <strong>N0TH1NG</strong>. </p>
+        <br />
 
-    <h3> What products provide Digital Dreams ? </h3>
-    <p>Digital Dreams provide Lua script for <strong>Cheats</strong> for the game Counter-Strike : Global Offensive. </p>
-    <br />
+        <h3> What products does Digital Dreams offer? </h3>
+        <p>Digital Dreams offers Lua scripts for <strong>cheats</strong> in the game Counter-Strike: Global Offensive. </p>
+        <br />
 
-    <h3> What Cheats support Digital Dreams Luas ? </h3>
-    <p>Digital Dreams Luas support for now only Neverlose.cc. However in future we plan to provide for more. </p>
-    <br />
+        <h3> Which cheats are supported by Digital Dreams Lua scripts? </h3>
+        <p>Currently, Digital Dreams Lua scripts only support Neverlose.cc. However, we plan to expand our support to other cheats in the future. </p>
+        <br />
 
-    <h3> Is Digital Dreams products Paid ? </h3>
-    <p>Yes, however we always make sure that everyone will be able to purchase them. </p>
-    <br />
+        <h3> Are Digital Dreams products paid? </h3>
+        <p>Yes, our products are paid. However, we strive to make them accessible and affordable for everyone. </p>
+        <br />
 
-    <h3> Whats about Digital Dreams products Updates ? </h3>
-    <p>We always make sure that our products are up-todate and will provide the users the best experience possible </p>
-    <br />
+        <h3> How often are Digital Dreams products updated? </h3>
+        <p>We regularly update our products to ensure that our users have the best possible experience. </p>
+        <br />
 
-    <h3> Whats to do if I faced any problem with Digital Dreams ? </h3>
-    <p>In any case you faced any problem / trouble with Digital Dreams, you can contanct our support team via Discord. </p>
-    <br />
+        <h3> What should I do if I encounter a problem with Digital Dreams? </h3>
+        <p>If you experience any issues or problems with Digital Dreams, you can contact our support team via Discord for assistance. </p>
+        <br />
+    </div>
+
+    
+
 
 </asp:Content>

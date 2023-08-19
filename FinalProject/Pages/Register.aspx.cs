@@ -32,6 +32,7 @@ namespace FinalProject.Pages
                 
 
                 Helper.Insert(user);
+                Response.Redirect("/Pages/LogIn");
             }
         }
     }

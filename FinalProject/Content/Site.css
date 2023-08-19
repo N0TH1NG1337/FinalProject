@@ -12,7 +12,7 @@ body {
     font-family: Segoe UI;
 }
 
-/* fix the issue with the body background . Credit : BING AI */
+/* fix the issue with the body background */
 html {
     min-height: 100%;
 }
@@ -40,9 +40,23 @@ hr {
 }
 
 @keyframes OpenPage {
-    from {color: rgba(202, 202, 220, 0);}
+    from {
+        color: rgba(202, 202, 220, 0);
+    }
 
-    to {color: rgba(202, 202, 220, 1);}
+    to {
+        color: rgba(202, 202, 220, 1);
+    }
+}
+
+@keyframes MarginPage {
+    from {
+        margin-left: 20px;
+    }
+
+    to {
+        margin-left: 50px;
+    }
 }
 
 @keyframes EnchantingEffect {
@@ -51,12 +65,37 @@ hr {
     }
 }
 
+.BodyContainer {
+    margin: 20px;
+    animation: MarginPage;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.PageLoad {
+    animation: OpenPage;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.NewNavigateBar {
+    background-image: linear-gradient(rgba(27, 23, 24, 0), rgba(27, 23, 24, 1));
+    border-radius: 8px;
+    border-bottom: groove rgba(202, 202, 255, 0.3);
+    margin: 10px;
+    margin-bottom: 5px;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
 .Pages {
     display: block;
     padding: 15px;
     color: #a0a0ff;
     text-shadow: 2px 2px 5px rgba(202, 202, 255, 0.4);
-    background: -webkit-linear-gradient(#c5c5c5, #5d5d5d); /*#121111*/
+    background: -webkit-linear-gradient(#c5c5c5, #5d5d5d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 20px;
@@ -68,6 +107,35 @@ hr {
 
 .Pages:hover {
     opacity: 0.2;
+}
+
+.NewHeader {
+    color: #a0a0ff;
+    text-shadow: 0px 0px 10px rgba(202, 202, 255, 0.4);
+    background: linear-gradient(to right, rgba(54, 54, 54, 0.1) 20%, #adb0ff 40%, #adb0ff 60%, rgba(54, 54, 54, 0.1) 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: EnchantingEffect 2s linear infinite;
+    font-size: 25px;
+    padding: 15px;
+    float: left;
+    opacity: 1;
+    transition: opacity 0.3s, text-shadow 0.2s, animation 0.1s;
+}
+
+.NewHeader:hover {
+    opacity: 0.5;
+    text-shadow: none;
+    animation: none;
+    background:-webkit-linear-gradient(#adb0ff, #363636);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.PageTitle {
+    text-shadow: 2px 2px 5px rgba(202, 202, 255, 0.4);
+    font-size: 30px;
 }
 
 .Tabs {
@@ -90,23 +158,14 @@ hr {
     float: right;
 }
 
-.NewNavigateBar {
-    background-color: rgba(27, 23, 24, 1);
-    border-radius: 8px;
-    border-bottom: groove rgba(202, 202, 255, 0.3); /*rgba(202, 202, 255, 0.3)*/
-    margin: 10px;
-    margin-bottom: 5px;
-    /*position: fixed; */
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
+.Box {
+    background-color: rgba(37, 33, 34, 0.3);
+    border-radius: 10px;
 }
 
 .ProductBox {
-    background-color: rgba(37, 33, 34, 0.3);
-    border-radius: 10px;
-    outline: 1.5px solid rgb(67, 63, 64);
+    border-top: groove rgba(202, 202, 255, 0.3);
+    border-bottom: groove rgba(202, 202, 255, 0.3);
     float: left;
     width: 48%;
     padding: 10px;
@@ -114,53 +173,9 @@ hr {
 }
 
 .AdminTableBox {
-    background-color: rgba(37, 33, 34, 0.3);
-    border-radius: 10px;
-    outline: 1.5px solid rgb(67, 63, 64);
-    text-align: center
-}
-
-.NewHeader {
-    color: #a0a0ff;
-    text-shadow: 0px 0px 10px rgba(202, 202, 255, 0.4);
-    /*background: -webkit-linear-gradient(#adb0ff, #d1d3ff);*/
-
-    background: linear-gradient(to right, rgba(54, 54, 54, 0.1) 20%, #adb0ff 40%, #adb0ff 60%, rgba(54, 54, 54, 0.1) 80%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: EnchantingEffect 2s linear infinite;
-    font-size: 25px;
-    padding: 15px;
-    float: left;
-    opacity: 1;
-    transition: opacity 0.3s, text-shadow 0.2s, animation 0.1s;
-}
-
-.NewHeader:hover {
-    opacity: 0.5;
-    text-shadow: none;
-    animation: none;
-    background:-webkit-linear-gradient(#adb0ff, #363636);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.BodyContainer {
-    margin: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.PageLoad {
-    animation: OpenPage;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.PageTitle {
-    text-shadow: 2px 2px 5px rgba(202, 202, 255, 0.4);
-    font-size: 30px;
+    border-top: groove rgba(202, 202, 255, 0.3);
+    text-align: center;
+    border-collapse: separate
 }
 
 .InputLoad {
@@ -170,13 +185,21 @@ hr {
 .InputBox {
     margin-bottom: 10px;
     background-color: rgba(37, 33, 34, 0.5);
-    border-radius: 6px;
-    border: 1px solid rgb(67, 63, 64);
-    transition: background-color 0.2s;
+    border-radius: 4px;
+    border: none;
+    border-right: groove rgba(202, 202, 255, 0);
+    border-left: groove rgba(202, 202, 255, 0.3);
+    transition: background-color 0.2s, border-right 0.2s;
 }
 
 .InputBox:hover {
+    background-color: rgba(20, 20, 20, 0.5); 
+}
+
+.InputBox:focus {
+    outline: none;
     background-color: rgba(10, 10, 10, 0.5); 
+    border-right: groove rgba(202, 202, 255, 0.3);
 }
 
 .Submit {
@@ -184,15 +207,20 @@ hr {
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin: 5px;
     background-color: rgba(37, 33, 34, 0.5);
     border-radius: 8px;
-    border: 1px solid rgb(67, 63, 64);
+    border: none;
+    border-right: groove rgba(202, 202, 255, 0.1);
+    border-left: groove rgba(202, 202, 255, 0.1);
     font-size: 18px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-right 0.3s, border-left 0.3s;
 }
 
 .Submit:hover {
     background-color: rgba(10, 10, 10, 0.5); 
+    border-right: groove rgba(202, 202, 255, 0.3);
+    border-left: groove rgba(202, 202, 255, 0.3);
 }
 
 .ErrorOnLogIn {
@@ -200,12 +228,6 @@ hr {
     animation-duration: 2s;
     animation-fill-mode: forwards;
     font-size: 15px;
-}
-
-.FixOverlap::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 .ListAnim {
@@ -232,14 +254,17 @@ hr {
     padding: 10px 20px;
     background-color: rgba(37, 33, 34, 0.5);
     border-radius: 6px;
-    border: 1px solid rgb(67, 63, 64);
-    transition: background-color 0.3s, color 0.3s;
+    border-right: groove rgba(202, 202, 255, 0.1);
+    border-left: groove rgba(202, 202, 255, 0.1);
+    transition: background-color 0.3s, color 0.3s, border-right 0.3s, border-left 0.3s;
 }
 
 .ButtonGet:hover {
     background-color: rgba(10, 10, 10, 0.5); 
     color: rgb(150, 150, 150);
     text-decoration: none;
+    border-right: groove rgba(202, 202, 255, 0.3);
+    border-left: groove rgba(202, 202, 255, 0.3);
 }
 
 .ButtonGet:visited {
@@ -253,14 +278,6 @@ hr {
 
 .ImageOnHome:hover {
   transform: scale(1.1);
-}
-
-.BoxOutLineCreate {
-    background-color: rgba(37, 33, 34, 0.3);
-    border-radius: 10px;
-    outline: 1.5px solid rgb(67, 63, 64);
-    padding: 10px;
-    overflow: hidden
 }
 
 .MainText {
@@ -306,9 +323,7 @@ hr {
 }
 
 .ForumBox {
-    background-color: rgba(37, 33, 34, 0.3);
-    border-radius: 10px;
-    outline: 1.5px solid rgb(67, 63, 64);
+    border-left: groove rgba(202, 202, 255, 0.3);
     padding: 10px;
     margin: 10px;
 }
@@ -343,6 +358,10 @@ hr {
     margin-left: 50%;
 }
 
+.PageDistance {
+    margin: 10px;
+}
+
 #UserImage {
     font-size: 120px;
     padding: 10px;
@@ -354,7 +373,10 @@ hr {
 
 #UserBox {
     display: flex;
-    align-items: center
+    align-items: center;
+    border-left: groove rgba(202, 202, 255, 0.3);
+    padding: 10px;
+    overflow: hidden
 }
 
 #Announce {
@@ -404,20 +426,50 @@ hr {
     justify-content: center
 }
 
-@media screen and (max-width: 1100px) {
-    .Pages {
-        opacity: 0;
-        /*display: none;*/
-    }
+#Footer {
+    color: rgba(202, 202, 220, 0.4);
 }
 
-/* need to use this to still have animations :D */
-@media screen and (max-width: 1070px) {
-    .Pages { 
+#Footer a {
+    text-decoration: none;
+    color: rgba(202, 202, 220, 0.4);
+}
+
+#Footer a:hover {
+    text-decoration: none;
+    color: rgba(202, 202, 220, 0.2);
+}
+
+#SearchImage {
+    border: none;
+    border-right: groove rgba(202, 202, 255, 0.1);
+    border-left: groove rgba(202, 202, 255, 0.1);
+    font-size: 18px; 
+    margin-left: 10px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-right 0.3s, border-left 0.3s;
+}
+
+#SearchImage:hover {
+    background-color: rgba(10, 10, 10, 0.5); 
+    border-right: groove rgba(202, 202, 255, 0.3);
+    border-left: groove rgba(202, 202, 255, 0.3);
+}
+
+#userInput {
+    margin: 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .Pages {
         display: none;
     }
 }
 
+/* Can use flex box */
 @media screen and (max-width: 1129px) {
     .ProductBox {
         width: auto;
@@ -427,7 +479,7 @@ hr {
 
 /* Custom Scroll Bar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
 }
 
 /* Background */
@@ -437,7 +489,7 @@ hr {
  
 /* The Interactive Part */
 ::-webkit-scrollbar-thumb {
-  background: rgb(27, 23, 24); 
+  background: rgba(57, 53, 54, 0.5); 
 }
 
 /* Interact on Hover */

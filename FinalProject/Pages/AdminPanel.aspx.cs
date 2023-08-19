@@ -23,7 +23,7 @@ namespace FinalProject.Pages
                 else
                 {
                     // Do everything in the admin panel
-                    String sql = "SELECT userId, userName, firstName, lastName, birthday, Admin FROM tblUser";
+                    String sql = "SELECT userId, userName, firstName, lastName, birthday, city, Admin FROM tblUser";
                     DataTable dt = Helper.RetrieveTable(sql).Tables[0];
                     DataTable sortdt = Helper.SortTable(dt, "userId", "ASC"); // ASC - סדר יורד
                     tbl = Helper.BuildUsersTable(sortdt);

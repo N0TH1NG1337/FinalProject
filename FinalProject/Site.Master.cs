@@ -12,6 +12,7 @@ namespace FinalProject
         protected bool IsLoggedIn = false;
         protected bool IsAdmin = false;
         protected string FirstName = "";
+        protected string UserName = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,6 +24,7 @@ namespace FinalProject
                     IsAdmin = true;
 
                 FirstName = Session["firstName"].ToString();
+                UserName = Session["userName"].ToString();
             }
         }
     }

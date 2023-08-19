@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> Digital Dreams</title>
+    <title>Digital Dreams</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -14,6 +14,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <!--<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+
     <link href="Nightmare.ico" rel="shortcut icon" type="image/x-icon" />
     <script src="/Scripts/JavaScript.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -57,7 +58,7 @@
                             Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/LogOut\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">logout</i>Log Out</a></li>");
                             if (IsAdmin)
                                 Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/AdminPanel\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">shield</i>Admin Panel</a></li>");
-                            Response.Write("<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/UserPanel\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">person</i>User</a></li>");
+                            Response.Write($"<li class=\"Pages LoginAndSignUp\"><a runat=\"server\" href=\"/Pages/UserPanel\"><i class=\"material-icons\" style=\"font-size: 15px; padding: 5px\">person</i>{UserName}</a></li>");
                         }
                         else
                         {
@@ -68,7 +69,6 @@
 
                     <li class="Pages"><a runat="server" href="/Pages/QandA">Q&A</a></li>
                 </ul>
-            
         </div>
 
         <div class="BodyContainer">
@@ -81,9 +81,12 @@
             <hr/>
 
             <footer>
-                <p style="color: rgba(202, 202, 255, 0.4)"> Michael Sokolov - Digital Dreams </p>
+                <div id="Footer">
+                    <p> Michael Sokolov - Digital Dreams </p>
+                    <a href="https://discord.gg/SD6xeBA4MR" target="_blank">Discord</a><br />
+                    <a href="https://www.youtube.com/channel/UCN9Fgit6fRjbeYom7kjB-_Q" target="_blank">YouTube</a>
+                </div>
             </footer>
-
 
         </div>
 
